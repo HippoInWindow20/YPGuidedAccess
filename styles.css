@@ -1,0 +1,25 @@
+.header {
+    width: 100vw;
+    height: 10vh;
+}
+
+.body {
+    width: 100vw;
+    height: 80vh;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: white;
+}
+
+div {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
