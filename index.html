@@ -7,44 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0maximum-scale=1.0, user-scalable=no">
     <title>Guided Access</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="header"></div>
+    <div class="header">
+        <span class="title">YPGuidedAccess</span>
+    </div>
     <div class="body">
         <div class="flex">
             <button class="menuItem" onclick="doUnlock()">
-                <img class="icon" src="unlock.png" />
+                <img class="icon" src="windows.svg" />
                 <br>
-                unlock
+                Windows
             </button>
             <button class="menuItem" onclick="ITKiosk()">
                 <img class="icon" src="class.png" />
                 <br>
-                itkiosk
+                電子班牌
             </button>
-            <button class="menuItem" onclick="ITKiosk()">
-                <img class="icon" src="youtube.svg" />
-                <br>
-                youtube
+            <button class="menuItem" onclick="chrome('YT')">
+                <img class="icon iconOnly" src="youtube.svg" />
             </button>
-            <button class="menuItem" onclick="ITKiosk()">
+            <button class="menuItem" onclick="explorer()">
                 <img class="icon" src="usb-memory-stick.png" />
                 <br>
-                USB/Explorer
+                USB/檔案總管
             </button>
         </div>
         <div class="flex">
-            <button class="menuItem" onclick="doUnlock()">
+            <button class="menuItem disabled" onclick="doUnlock()" disabled>
                 <img class="icon" src="airplay.png" />
                 <br>
                 投影
             </button>
-            <button class="menuItem" onclick="ITKiosk()">itkiosk</button>
-            <button class="menuItem" onclick="ITKiosk()">itkiosk</button>
-            <button class="menuItem" onclick="ITKiosk()">itkiosk</button>
+            <button class="menuItem" onclick="chrome()">
+                <img class="icon" src="chrome.svg" />
+                <br>
+                Chrome 瀏覽器
+            </button>
+            <button class="menuItem" onclick="meet()">
+                <img class="icon" src="meet.svg" />
+                <br>
+                Meet
+            </button>
+            <button class="menuItem disabled" onclick="ITKiosk()" disabled>
+                <img class="icon" src="whiteboard.svg" />
+                <br>
+                白板
+            </button>
         </div>
     </div>
     <div class="footer"></div>
