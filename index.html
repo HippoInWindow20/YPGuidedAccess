@@ -14,8 +14,38 @@
 
     <div class="header"></div>
     <div class="body">
-        <button onclick="doUnlock()">unlock</button>
-        <button onclick="ITKiosk()">itkiosk</button>
+        <div class="flex">
+            <button class="menuItem" onclick="doUnlock()">
+                <img class="icon" src="unlock.png" />
+                <br>
+                unlock
+            </button>
+            <button class="menuItem" onclick="ITKiosk()">
+                <img class="icon" src="class.png" />
+                <br>
+                itkiosk
+            </button>
+            <button class="menuItem" onclick="ITKiosk()">
+                <img class="icon" src="youtube.svg" />
+                <br>
+                youtube
+            </button>
+            <button class="menuItem" onclick="ITKiosk()">
+                <img class="icon" src="usb-memory-stick.png" />
+                <br>
+                USB/Explorer
+            </button>
+        </div>
+        <div class="flex">
+            <button class="menuItem" onclick="doUnlock()">
+                <img class="icon" src="airplay.png" />
+                <br>
+                投影
+            </button>
+            <button class="menuItem" onclick="ITKiosk()">itkiosk</button>
+            <button class="menuItem" onclick="ITKiosk()">itkiosk</button>
+            <button class="menuItem" onclick="ITKiosk()">itkiosk</button>
+        </div>
     </div>
     <div class="footer"></div>
     <script src="index.js"></script>

@@ -1,6 +1,7 @@
 .header {
     width: 100vw;
     height: 10vh;
+    background: #EEE;
 }
 
 .body {
@@ -11,6 +12,7 @@
 .footer {
     width: 100vw;
     height: 10vh;
+    background: #EEE;
 }
 
 body {
@@ -21,5 +23,33 @@ body {
 
 div {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: none;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+.menuItem {
+    width: 30vh;
+    height: 30vh;
+    margin: 5vh;
+    border-radius: 50px;
+    border: none;
+    font-size: 30px;
+    transition: 0.2s;
+}
+
+.menuItem:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0 16px 7px #ccc;
+}
+
+.menuItem:active {
+    transform: scale(0.8);
+}
+
+.icon {
+    height: 15vh;
 }
