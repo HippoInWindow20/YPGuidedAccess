@@ -15,54 +15,71 @@
 <body>
 
     <div class="header">
-        <span class="title">YPGuidedAccess</span>
+        <table style="width: 100%;border: none;">
+            <tbody>
+                <tr>
+                    <td style="width:calc(100% - 80vh);">
+                        <span class="title">電子班牌</span>
+                        <span class="subtitle">v1.0</span>
+                    </td>
+                    <td style="width: 80vh;text-align: right;">
+                        <button id="CH" class="langSelect selected" onclick="switchLang('CH')">中文</button>
+                        <button id="EN" class="langSelect" onclick="switchLang('EN')">ENG</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
-    <div class="body">
-        <div class="flex">
-            <button class="menuItem" onclick="doUnlock()">
-                <img class="icon" src="windows.svg" />
+    <div class=" body ">
+        <div class="flex ">
+            <button class="menuItem " onclick="doUnlock() ">
+                <img class="icon " src="windows.svg " />
                 <br>
                 Windows
             </button>
-            <button class="menuItem" onclick="ITKiosk()">
-                <img class="icon" src="class.png" />
+            <button class="menuItem " onclick="ITKiosk() ">
+                <img class="icon " src="class.png " />
                 <br>
                 電子班牌
             </button>
-            <button class="menuItem" onclick="chrome('YT')">
-                <img class="icon iconOnly" src="youtube.svg" />
+            <button class="menuItem " onclick="chrome( 'YT') ">
+                <img class="icon iconOnly " src="youtube.svg " />
             </button>
-            <button class="menuItem" onclick="explorer()">
-                <img class="icon" src="usb-memory-stick.png" />
+            <button class="menuItem " onclick="explorer() ">
+                <img class="icon " src="usb-memory-stick.png " />
                 <br>
                 USB/檔案總管
             </button>
         </div>
-        <div class="flex">
-            <button class="menuItem" onclick="cast()">
-                <img class="icon" src="airplay.png" />
+        <div class="flex ">
+            <button class="menuItem " onclick="cast() ">
+                <img class="icon " src="airplay.png " />
                 <br>
                 投影
             </button>
-            <button class="menuItem" onclick="chrome()">
-                <img class="icon" src="chrome.svg" />
+            <button class="menuItem " onclick="chrome() ">
+                <img class="icon " src="chrome.svg " />
                 <br>
                 Chrome 瀏覽器
             </button>
-            <button class="menuItem" onclick="meet()">
-                <img class="icon" src="meet.svg" />
+            <button class="menuItem " onclick="meet() ">
+                <img class="icon " src="meet.svg " />
                 <br>
                 Meet
             </button>
-            <button class="menuItem" onclick="whiteboard()">
-                <img class="icon" src="whiteboard.svg" />
+            <button class="menuItem " onclick="whiteboard() ">
+                <img class="icon " src="whiteboard.svg " />
                 <br>
                 白板
             </button>
         </div>
     </div>
-    <div class="footer"></div>
-    <script src="index.js"></script>
+    <div class="footer ">
+        <button class="langSelect freeWidth">深色模式</button>
+        <button class="langSelect freeWidth selectedFree">引導模式</button>
+    </div>
+    <script src="index.js "></script>
 </body>
 
 </html>

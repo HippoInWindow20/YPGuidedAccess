@@ -57,6 +57,7 @@ function cast() {
         console.log(data.toString());
     });
 }
+
 function whiteboard() {
     var executablePath = "C:\\Program Files\\EPSON Projector\\Easy Interactive Tools Ver.5\\EIN_TTW.exe";
     var parameters = [];
@@ -64,4 +65,14 @@ function whiteboard() {
         console.log(err)
         console.log(data.toString());
     });
+}
+
+function switchLang(lang) {
+    if (lang == "CH") {
+        document.getElementById("CH").classList.add("selected")
+        document.getElementById("EN").classList.remove("selected")
+    } else if (lang == "EN") {
+        document.getElementById("EN").classList.add("selected")
+        document.getElementById("CH").classList.remove("selected")
+    }
 }

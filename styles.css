@@ -23,6 +23,9 @@
     height: 10vh;
     background: none;
     font-family: var(--main-font);
+    padding: 2vh 5vh;
+    box-sizing: border-box;
+    color: #333
 }
 
 body {
@@ -97,6 +100,46 @@ div {
 .title {
     color: #555;
     font-family: var(--main-font);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 6vh;
+}
+
+.subtitle {
+    color: rgb(158, 158, 158);
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: 4vh;
+}
+
+.langSelect {
+    color: black;
+    font-family: var(--main-font);
+    font-size: 5vh;
+    border-radius: 100vh;
+    background: none;
+    border: none;
+    width: 20vh;
+    height: 8vh;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 300;
+}
+
+.selected {
+    background: rgb(191, 191, 191);
+    font-weight: 500;
+}
+
+.freeWidth {
+    width: auto;
+    padding: 0 2vw;
+    background: rgb(226, 226, 226);
+    font-size: 4vh;
+    height: auto;
+    margin-right: 2vw
+}
+
+.selectedFree {
+    background: rgb(40, 40, 40);
+    color: white;
 }
