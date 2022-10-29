@@ -55,13 +55,8 @@ div {
     margin: 5vh;
     border-radius: 5vh;
     border: none;
-    font-size: 4vh;
     transition: 0.2s;
     background: #f0f0f0;
-    font-family: var(--main-font);
-    color: #111;
-    font-weight: 500;
-    letter-spacing: 2px;
 }
 
 .menuItem:hover {
@@ -126,7 +121,7 @@ div {
 }
 
 .selected {
-    background: rgb(191, 191, 191);
+    background: rgb(210, 210, 210);
     font-weight: 500;
 }
 
@@ -145,5 +140,20 @@ div {
 }
 
 button {
-	-webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.buttonAlt {
+    font-family: var(--main-font);
+    color: #111;
+    font-weight: 500;
+    font-size: 4vh;
+    /* letter-spacing: 2px; */
+}
+
+.secondaryAlt {
+    color: #333;
+    font-weight: 300;
+    font-size: 2.5vh;
+    display: none;
 }

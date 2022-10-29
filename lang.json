@@ -1,0 +1,125 @@
+{
+    "EN": {
+        "title": "YP Interactive Kiosk",
+        "buttons": {
+            "unlock": {
+                "main": "Windows",
+                "secondary": ["Unlock to use as PC"]
+            },
+            "ITKiosk": {
+                "main": "School Software",
+                "secondary": ["Take attendance, random picker, card check in", ""]
+            },
+            "youtube": {
+                "main": "YouTube",
+                "secondary": ["Search/Play videos from", "YouTube by URL"]
+            },
+            "explorer": {
+                "main": "File Explorer",
+                "secondary": ["Explore or open files", "from Flash drive/hard disk"]
+            },
+            "cast": {
+                "main": "Screen Cast",
+                "secondary": ["Mirror screen from phone/tablet", "Apple devices only"]
+            },
+            "chrome": {
+                "main": "Chrome",
+                "secondary": ["Browse the Internet", ""]
+            },
+            "meet": {
+                "main": "Meet",
+                "secondary": ["Log in to online classroom", "dju-eaxi-vne"]
+            },
+            "whiteboard": {
+                "main": "Whiteboard",
+                "secondary": ["Draw using interactive pen", "via the projector in Mouse Mode"]
+            }
+        },
+        "toggles": [
+            "Dark Mode",
+            "Tutorial Mode"
+        ]
+    },
+    "CH": {
+        "title": "電子班牌",
+        "buttons": {
+            "unlock": {
+                "main": "Windows",
+                "secondary": ["解鎖使用電腦完整功能"]
+            },
+            "ITKiosk": {
+                "main": "電子班牌",
+                "secondary": ["點名、抽籤、晚自習", "、換座位、刷卡簽到"]
+            },
+            "youtube": {
+                "main": "YouTube",
+                "secondary": ["搜尋/網址播放", "YouTube 影片"]
+            },
+            "explorer": {
+                "main": "檔案總管",
+                "secondary": ["瀏覽或開啟", "隨身碟/硬碟檔案"]
+            },
+            "cast": {
+                "main": "投影",
+                "secondary": ["投射手機/平板畫面", "支援蘋果裝置"]
+            },
+            "chrome": {
+                "main": "Chrome 瀏覽器",
+                "secondary": ["瀏覽網際網路", "遊玩恐龍遊戲"]
+            },
+            "meet": {
+                "main": "Meet",
+                "secondary": ["進入線上教室", "dju-eaxi-vne"]
+            },
+            "whiteboard": {
+                "main": "白板",
+                "secondary": ["以互動筆在投影機上繪圖", "，記得切換至滑鼠模式"]
+            }
+        },
+        "toggles": [
+            "深色模式",
+            "引導模式"
+        ]
+    },
+    "NGGYU": {
+        "title": "Never Gonna Give You Up",
+        "buttons": {
+            "unlock": {
+                "main": "Never gonna",
+                "secondary": [""]
+            },
+            "ITKiosk": {
+                "main": "let you down",
+                "secondary": ["", ""]
+            },
+            "youtube": {
+                "main": "Never gonna",
+                "secondary": ["", ""]
+            },
+            "explorer": {
+                "main": "run around and",
+                "secondary": ["", ""]
+            },
+            "cast": {
+                "main": "desert you",
+                "secondary": ["", ""]
+            },
+            "chrome": {
+                "main": "Never gonna",
+                "secondary": ["", ""]
+            },
+            "meet": {
+                "main": "make you cry",
+                "secondary": ["", ""]
+            },
+            "whiteboard": {
+                "main": "Never gonna",
+                "secondary": ["", ""]
+            }
+        },
+        "toggles": [
+            "say goodbye",
+            "Never gonna tell a lie and hurt you"
+        ]
+    }
+}
