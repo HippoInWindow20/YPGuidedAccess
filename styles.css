@@ -50,8 +50,10 @@ div {
 }
 
 .menuItem {
+    /* width: calc((100vw - 10vh) / 5); */
     width: calc((100vw - 20vh) / 4);
     height: 30vh;
+    /* margin: 2vh; */
     margin: 5vh;
     border-radius: 5vh;
     border: none;

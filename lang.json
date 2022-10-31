@@ -8,7 +8,7 @@
             },
             "ITKiosk": {
                 "main": "School Software",
-                "secondary": ["Take attendance, random picker, card check in", ""]
+                "secondary": ["Take attendance,", "student picker"]
             },
             "youtube": {
                 "main": "YouTube",
@@ -32,7 +32,7 @@
             },
             "whiteboard": {
                 "main": "Whiteboard",
-                "secondary": ["Draw using interactive pen", "via the projector in Mouse Mode"]
+                "secondary": ["Draw on the projector ", "in Mouse Mode"]
             }
         },
         "toggles": [
