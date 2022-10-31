@@ -23,6 +23,8 @@ function chrome(arg) {
     var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
     if (arg == "YT")
         var parameters = ["youtube.com", "--profile-directory='Default'"];
+	else if  (arg == "nba")
+		var parameters = ["--app-id=pdgimjookceomihkhmfdmnohlmkafadb", "--profile-directory=Default"];
     else
         var parameters = ["--profile-directory='Default'"];
     child(executablePath, parameters, function(err, data) {
