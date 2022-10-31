@@ -59,11 +59,11 @@ div {
     background: #f0f0f0;
 }
 
-.menuItem:hover {
-    transform: scale(1.2);
-    box-shadow: 0px 0 16px 7px #ccc;
-    background: white;
-}
+/* .menuItem:hover { */
+    /* transform: scale(1.2); */
+    /* box-shadow: 0px 0 16px 7px #ccc; */
+    /* background: white; */
+/* } */
 
 .menuItem:active {
     transform: scale(0.8);

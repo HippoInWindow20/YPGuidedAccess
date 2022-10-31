@@ -22,11 +22,11 @@ function ITKiosk() {
 function chrome(arg) {
     var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
     if (arg == "YT")
-        var parameters = ["youtube.com", "--profile-directory='Default'"];
+        var parameters = ["youtube.com", "--profile-directory=Default"];
 	else if  (arg == "nba")
 		var parameters = ["--app-id=pdgimjookceomihkhmfdmnohlmkafadb", "--profile-directory=Default"];
     else
-        var parameters = ["--profile-directory='Default'"];
+        var parameters = ["--profile-directory=Default"];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
         console.log(data.toString());
@@ -44,7 +44,7 @@ function explorer() {
 
 function meet() {
     var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
-    var parameters = ["meet.google.com/dju-eaxi-vne", "--profile-directory='Profile 1'"];
+    var parameters = ["meet.google.com/dju-eaxi-vne", "--profile-directory=Profile 1"];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
         console.log(data.toString());
