@@ -167,3 +167,8 @@ function slideBack(ArrayId) {
         }, 500)
     }
 }
+
+var z = document.getElementsByTagName("img")
+for (var j = 0; j < z.length; j++) {
+    z[j].draggable = false
+}
