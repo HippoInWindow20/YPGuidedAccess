@@ -16,6 +16,9 @@
     width: 100vw;
     height: 80vh;
     font-family: var(--main-font);
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .footer {
@@ -33,6 +36,7 @@ body {
     overflow: hidden;
     background: white;
     font-family: var(--main-font);
+    white-space: nowrap;
 }
 
 div {
@@ -49,6 +53,10 @@ div {
     font-family: var(--main-font);
 }
 
+.full {
+    height: 80vh
+}
+
 .menuItem {
     /* width: calc((100vw - 10vh) / 5); */
     width: calc((100vw - 20vh) / 4);
@@ -61,10 +69,19 @@ div {
     background: #f0f0f0;
 }
 
+
 /* .menuItem:hover { */
-    /* transform: scale(1.2); */
-    /* box-shadow: 0px 0 16px 7px #ccc; */
-    /* background: white; */
+
+
+/* transform: scale(1.2); */
+
+
+/* box-shadow: 0px 0 16px 7px #ccc; */
+
+
+/* background: white; */
+
+
 /* } */
 
 .menuItem:active {

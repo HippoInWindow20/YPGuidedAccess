@@ -23,8 +23,8 @@ function chrome(arg) {
     var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
     if (arg == "YT")
         var parameters = ["youtube.com", "--profile-directory=Default"];
-	else if  (arg == "nba")
-		var parameters = ["--app-id=pdgimjookceomihkhmfdmnohlmkafadb", "--profile-directory=Default"];
+    else if (arg == "nba")
+        var parameters = ["--app-id=pdgimjookceomihkhmfdmnohlmkafadb", "--profile-directory=Default"];
     else
         var parameters = ["--profile-directory=Default"];
     child(executablePath, parameters, function(err, data) {
@@ -44,7 +44,7 @@ function explorer() {
 
 function meet() {
     var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
-    var parameters = ["meet.google.com/dju-eaxi-vne", "--profile-directory=Profile 1","--start-fullscreen"];
+    var parameters = ["meet.google.com/dju-eaxi-vne", "--profile-directory=Profile 1", "--start-fullscreen"];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
         console.log(data.toString());
@@ -144,7 +144,26 @@ function reinitialise(singleLangJSON) {
         $("#SUB_WHITEBOARD_2").html(singleLangJSON.buttons.whiteboard.secondary[1])
         $("#FEATURE_DARK").html(singleLangJSON.toggles[0])
         $("#FEATURE_TUTORIAL").html(singleLangJSON.toggles[1])
+        $("#LABEL_BACK").html(singleLangJSON.yt.back)
+        $("#LABEL_SEARCH").html(singleLangJSON.yt.search)
+        $("#LABEL_LINK").html(singleLangJSON.yt.url)
         $(document.body).fadeIn(300)
     }, 300)
 
+}
+
+function slideOver(ArrayId) {
+    for (var i = 0; i < ArrayId.length; i++) {
+        $("#" + ArrayId[i]).animate({
+            "left": "-100%"
+        }, 500)
+    }
+}
+
+function slideBack(ArrayId) {
+    for (var i = 0; i < ArrayId.length; i++) {
+        $("#" + ArrayId[i]).animate({
+            "left": "0"
+        }, 500)
+    }
 }

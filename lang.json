@@ -38,7 +38,12 @@
         "toggles": [
             "Dark Mode",
             "Tutorial Mode"
-        ]
+        ],
+        "yt": {
+            "back": "Back",
+            "search": "Search",
+            "url": "Link"
+        }
     },
     "CH": {
         "title": "電子班牌",
@@ -79,7 +84,12 @@
         "toggles": [
             "深色模式",
             "引導模式"
-        ]
+        ],
+        "yt": {
+            "back": "返回",
+            "search": "搜尋",
+            "url": "連結"
+        }
     },
     "NGGYU": {
         "title": "Never Gonna Give You Up",
@@ -120,6 +130,11 @@
         "toggles": [
             "say goodbye",
             "Never gonna tell a lie and hurt you"
-        ]
+        ],
+        "yt": {
+            "back": "",
+            "search": "",
+            "url": ""
+        }
     }
 }
