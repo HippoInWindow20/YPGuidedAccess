@@ -67,6 +67,7 @@ div {
     border: none;
     transition: 0.2s;
     background: #f0f0f0;
+    cursor: pointer;
 }
 
 
@@ -175,4 +176,8 @@ button {
     font-weight: 300;
     font-size: 2.5vh;
     display: none;
+}
+
+.roundedCorners {
+    border-radius: 3.8vh;
 }
