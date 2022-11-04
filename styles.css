@@ -181,3 +181,88 @@ button {
 .roundedCorners {
     border-radius: 3.8vh;
 }
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.prompt {
+    width: 80vw;
+    height: auto;
+    position: absolute;
+    left: 10vw;
+    background: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.promptTitle {
+    font-family: var(--main-font);
+    margin: 3vh;
+    font-size: 5vh;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 0;
+    width: 68vw;
+    padding: 2vh;
+    text-align: left;
+}
+
+.promptSub {
+    font-family: var(--main-font);
+    margin: 2vh 3vh;
+    font-size: 3vh;
+    font-weight: 500;
+    color: #111;
+    opacity: 0.8;
+}
+
+.input {
+    font-family: var(--main-font);
+    margin: 2vh 3vh;
+    font-size: 3vh;
+    font-weight: 500;
+    color: #111;
+    border: 5px solid #616161;
+    border-radius: 8px;
+    width: 68vw;
+    padding: 2vh;
+    transition: 0.2s;
+}
+
+.input:focus {
+    border: 5px solid #4285F4;
+    outline: none;
+}
+
+.buttonList {
+    width: 72vw;
+    margin: 2vh 3vh;
+    text-align: right;
+}
+
+.promptButton {
+    font-family: var(--main-font);
+    font-size: 3vh;
+    font-weight: 500;
+    color: #295cad;
+    opacity: 0.8;
+    padding: 2vh 4vh;
+    border-radius: 100vh;
+    background: none;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.promptButton:active {
+    background: #c5dbff;
+}

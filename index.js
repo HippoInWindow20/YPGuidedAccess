@@ -172,3 +172,22 @@ var z = document.getElementsByTagName("img")
 for (var j = 0; j < z.length; j++) {
     z[j].draggable = false
 }
+
+function displayPrompt(title, sub, buttons) {
+    document.getElementById("prompt").style.top = "calc(50vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
+    document.getElementById("overlay").style.visibility = "visible"
+    document.getElementById("promptTitle").innerHTML = title
+    document.getElementById("promptSub").innerHTML = sub
+    document.getElementById("buttonList").innerHTML = ""
+    for (var i = 0; i < buttons.length; i++) {
+        document.getElementById("buttonList").innerHTML += "<button class='promptButton' onclick='" + buttons[i][1] + "()'>" + buttons[i][0] + "</button>"
+    }
+    document.getElementById("overlay").style.opacity = "1"
+}
+
+function closePrompt() {
+    document.getElementById("overlay").style.opacity = "0"
+    setTimeout(function() {
+        document.getElementById("overlay").style.visibility = "hidden"
+    }, 500)
+}

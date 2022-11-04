@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
@@ -125,7 +126,7 @@
                 </span>
                 <div id="LABEL_LINK" class="buttonAlt">連結</div>
             </button>
-            <button class="menuItem">
+            <button class="menuItem" onclick="displayPrompt('輸入連結','',[['取消','closePrompt'],['確定','closePrompt']])">
                 <img class="icon iconOnly roundedCorners" src="yixun_placeholder.jpg" />
             </button>
         </div>
@@ -134,7 +135,17 @@
         <button id="FEATURE_DARK" data-state="off" class="langSelect freeWidth" onclick="toggleFeature(this)">深色模式</button>
         <button id="FEATURE_TUTORIAL" data-state="off" class="langSelect freeWidth" onclick="toggleFeature(this)">引導模式</button>
     </div>
-    <script src=" index.js "></script>
+    <div id="overlay" class="overlay">
+        <div id="prompt" class="prompt roundedCorners">
+            <div id="promptTitle" class="promptTitle">Title</div>
+            <div id="promptSub" class="promptSub">Subtitle</div>
+            <input id="input" type="text" class="input" />
+            <div id="buttonList" class="buttonList">
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
