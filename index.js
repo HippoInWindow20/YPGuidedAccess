@@ -1,6 +1,8 @@
 const { ipcRenderer } = require('electron')
 var child = require('child_process').execFile;
 var $ = require("jquery");
+var currentLang = "CH"
+var topOffset = 50
 
 function doUnlock() {
     $(document.body).fadeOut(500)
@@ -24,7 +26,7 @@ function chrome(arg) {
     if (arg == "YT")
         var parameters = ["youtube.com", "--profile-directory=Default"];
     else if (arg == "nba")
-        var parameters = ["--app-id=pdgimjookceomihkhmfdmnohlmkafadb", "--profile-directory=Default"];
+        var parameters = ["https://www.google.com/search?q=nba", "--profile-directory=Default"];
     else
         var parameters = ["--profile-directory=Default"];
     child(executablePath, parameters, function(err, data) {
@@ -79,6 +81,7 @@ function switchLang(lang) {
             }
             document.getElementById(lang).classList.add("selected")
             reinitialise(JSON.parse(xhttp.responseText)[lang])
+            currentLang = lang
 
         }
     };
@@ -176,7 +179,7 @@ for (var j = 0; j < z.length; j++) {
 function displayPrompt(title, sub, buttons) {
     document.getElementById("prompt").style.transition = "0s"
     document.getElementById("prompt").style.transform = "scale(1)"
-    document.getElementById("prompt").style.top = "calc(50vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
+    document.getElementById("prompt").style.top = "calc(" + topOffset + "vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
     document.getElementById("prompt").style.transform = "scale(0.7)"
     document.getElementById("prompt").style.transition = "0.2s"
     document.getElementById("overlay").style.visibility = "visible"
@@ -187,7 +190,7 @@ function displayPrompt(title, sub, buttons) {
         document.getElementById("buttonList").innerHTML += "<button class='promptButton' onclick='" + buttons[i][1] + "()'>" + buttons[i][0] + "</button>"
     }
     document.getElementById("prompt").style.transform = "scale(1)"
-    document.getElementById("prompt").style.top = "calc(50vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
+    document.getElementById("prompt").style.top = "calc(" + topOffset + "vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
     document.getElementById("overlay").style.opacity = "1"
 
 }
@@ -196,9 +199,42 @@ function closePrompt() {
     document.getElementById("overlay").style.opacity = "0"
     document.getElementById("prompt").style.transform = "scale(0.7)"
     document.getElementById("overlay").style.visibility = "hidden"
-    setTimeout(function() {
-        document.getElementById("prompt").style.top = null
-        document.getElementById("prompt").style.transition = "0s"
-    }, 300)
 
+}
+
+function YTSearch() {
+    closePrompt()
+    var query = document.getElementById("input").value
+    var url = "https://www.youtube.com/results?search_query="
+    var queryNew = query.replace(" ", "+")
+    var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+    var parameters = [url + queryNew, "--profile-directory=Default"];
+    child(executablePath, parameters, function(err, data) {
+        console.log(err)
+        console.log(data.toString());
+    });
+}
+
+function featurePrompt(feature) {
+    if (currentLang == "CH") {
+        if (feature == "YT")
+            displayPrompt('輸入關鍵字', '', [
+                ['取消', 'closePrompt'],
+                ['搜尋', 'YTSearch']
+            ])
+    } else if (currentLang == "EN") {
+        if (feature == "YT")
+            displayPrompt('Enter search keyword', '', [
+                ['Cancel', 'closePrompt'],
+                ['Search', 'YTSearch']
+            ])
+    }
+}
+
+setInterval(function() {
+    document.getElementById("prompt").style.top = "calc(" + topOffset + "vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
+}, 50)
+
+function changeOffset(num) {
+    topOffset = num
 }

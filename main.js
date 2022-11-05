@@ -9,7 +9,7 @@ const createWindow = () => {
         fullscreenable: true,
         fullscreen: true,
         simpleFullscreen: true,
-        frame: false,
+        // frame: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,

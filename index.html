@@ -114,7 +114,7 @@
                 </span>
                 <div id="LABEL_BACK" class="buttonAlt">返回</div>
             </button>
-            <button class="menuItem" onclick="chrome('YT')">
+            <button class="menuItem" onclick="featurePrompt('YT')">
                     <span class="material-symbols-outlined icon">
                         search
                     </span>
@@ -126,8 +126,7 @@
                 </span>
                 <div id="LABEL_LINK" class="buttonAlt">連結</div>
             </button>
-            <button class="menuItem" onclick="displayPrompt('輸入關鍵字','輸入關鍵字搜尋',[['取消','closePrompt'],['搜尋','closePrompt']])">
-                <img class="icon iconOnly roundedCorners" src="yixun_placeholder.jpg" />
+            <button class="menuItem backgroundOnly">
             </button>
         </div>
     </div>
@@ -139,10 +138,8 @@
         <div id="prompt" class="prompt roundedCorners">
             <div id="promptTitle" class="promptTitle"></div>
             <div id="promptSub" class="promptSub"></div>
-            <input id="input" type="text" class="input" />
-            <div id="buttonList" class="buttonList">
-
-            </div>
+            <input id="input" type="text" class="input" onfocus="changeOffset(25)" onblur="changeOffset(50)" />
+            <div id="buttonList" class="buttonList"></div>
         </div>
     </div>
     <script src="index.js"></script>

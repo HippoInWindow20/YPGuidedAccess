@@ -2,6 +2,14 @@
     --main-font: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
 }
 
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
 .header {
     width: 100vw;
     height: 10vh;
@@ -65,7 +73,7 @@ div {
     margin: 5vh;
     border-radius: 5vh;
     border: none;
-    transition: 0.2s;
+    transition: 0.1s;
     background: #f0f0f0;
     cursor: pointer;
 }
@@ -98,6 +106,11 @@ div {
     width: 30vh;
 }
 
+.backgroundOnly {
+    background: url('yixun_placeholder.jpg');
+    background-size: cover;
+}
+
 .disabled {
     filter: grayscale(1) brightness(0.8);
 }
@@ -117,6 +130,11 @@ div {
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 6vh;
+    transition: 0.1s;
+}
+
+.title:active {
+    transform: scale(0.8);
 }
 
 .subtitle {
@@ -243,7 +261,7 @@ button {
 }
 
 .input:focus {
-    border: 5px solid #4285F4;
+    border: 10px solid #4285F4;
     outline: none;
 }
 
