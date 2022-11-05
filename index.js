@@ -192,6 +192,7 @@ function displayPrompt(title, sub, buttons) {
     document.getElementById("prompt").style.transform = "scale(1)"
     document.getElementById("prompt").style.top = "calc(" + topOffset + "vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
     document.getElementById("overlay").style.opacity = "1"
+    document.getElementById("prompt").focus()
 
 }
 
