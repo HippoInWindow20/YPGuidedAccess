@@ -202,11 +202,13 @@ button {
     background: white;
     overflow: hidden;
     text-align: center;
+    transform: scale(0.7);
+    transition: 0.2s;
 }
 
 .promptTitle {
     font-family: var(--main-font);
-    margin: 3vh;
+    margin: 3vh 6vh;
     font-size: 5vh;
     font-weight: 500;
     color: #111;
@@ -218,17 +220,19 @@ button {
 
 .promptSub {
     font-family: var(--main-font);
-    margin: 2vh 3vh;
+    margin: 1vh 6vh;
     font-size: 3vh;
-    font-weight: 500;
+    font-weight: 400;
     color: #111;
     opacity: 0.8;
+    padding: 0 2vh;
+    text-align: left;
 }
 
 .input {
     font-family: var(--main-font);
     margin: 2vh 3vh;
-    font-size: 3vh;
+    font-size: 5vh;
     font-weight: 500;
     color: #111;
     border: 5px solid #616161;
@@ -244,25 +248,28 @@ button {
 }
 
 .buttonList {
-    width: 72vw;
+    width: 77vw;
     margin: 2vh 3vh;
     text-align: right;
 }
 
 .promptButton {
     font-family: var(--main-font);
-    font-size: 3vh;
+    font-size: 5vh;
     font-weight: 500;
     color: #295cad;
     opacity: 0.8;
-    padding: 2vh 4vh;
+    padding: 2vh 6vh;
     border-radius: 100vh;
     background: none;
     cursor: pointer;
     border: none;
     transition: 0.2s;
+    margin: 0 2vh;
+    margin-right: 0;
 }
 
 .promptButton:active {
+    color: #3472d6;
     background: #c5dbff;
 }

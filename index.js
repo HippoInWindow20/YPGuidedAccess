@@ -174,7 +174,11 @@ for (var j = 0; j < z.length; j++) {
 }
 
 function displayPrompt(title, sub, buttons) {
+    document.getElementById("prompt").style.transition = "0s"
+    document.getElementById("prompt").style.transform = "scale(1)"
     document.getElementById("prompt").style.top = "calc(50vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
+    document.getElementById("prompt").style.transform = "scale(0.7)"
+    document.getElementById("prompt").style.transition = "0.2s"
     document.getElementById("overlay").style.visibility = "visible"
     document.getElementById("promptTitle").innerHTML = title
     document.getElementById("promptSub").innerHTML = sub
@@ -182,12 +186,19 @@ function displayPrompt(title, sub, buttons) {
     for (var i = 0; i < buttons.length; i++) {
         document.getElementById("buttonList").innerHTML += "<button class='promptButton' onclick='" + buttons[i][1] + "()'>" + buttons[i][0] + "</button>"
     }
+    document.getElementById("prompt").style.transform = "scale(1)"
+    document.getElementById("prompt").style.top = "calc(50vh - " + (document.getElementById("prompt").getBoundingClientRect().height / 2) + "px)"
     document.getElementById("overlay").style.opacity = "1"
+
 }
 
 function closePrompt() {
     document.getElementById("overlay").style.opacity = "0"
+    document.getElementById("prompt").style.transform = "scale(0.7)"
+    document.getElementById("overlay").style.visibility = "hidden"
     setTimeout(function() {
-        document.getElementById("overlay").style.visibility = "hidden"
-    }, 500)
+        document.getElementById("prompt").style.top = null
+        document.getElementById("prompt").style.transition = "0s"
+    }, 300)
+
 }
