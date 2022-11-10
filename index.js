@@ -239,6 +239,6 @@ setInterval(function() {
 function changeOffset(num) {
     setTimeout(function() {
         topOffset = num
-    }, 500)
+    }, 200)
 
 }
