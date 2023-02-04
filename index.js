@@ -3,6 +3,12 @@ var child = require('child_process').execFile;
 var $ = require("jquery");
 var currentLang = "CH"
 var topOffset = 50
+import { readFile } from 'fs/promises';
+const path = JSON.parse(
+  await readFile(
+    new URL('./some-file.json', import.meta.url)
+  )
+);
 
 function doUnlock() {
     $(document.body).fadeOut(500)
@@ -13,7 +19,7 @@ function doUnlock() {
 }
 
 function ITKiosk() {
-    var executablePath = "C:\\ITKiosk\\KioskClient.exe";
+    var executablePath = path["ITKiosk"];
     var parameters = [];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
@@ -22,7 +28,7 @@ function ITKiosk() {
 }
 
 function chrome(arg) {
-    var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+    var executablePath = path["Chrome"];
     if (arg == "YT")
         var parameters = ["youtube.com", "--profile-directory=Default"];
     else if (arg == "nba")
@@ -36,7 +42,7 @@ function chrome(arg) {
 }
 
 function explorer() {
-    var executablePath = "C:\\Windows\\explorer.exe";
+    var executablePath = path["Explore"];
     var parameters = ["file://"];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
@@ -45,7 +51,7 @@ function explorer() {
 }
 
 function meet() {
-    var executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+    var executablePath = path["Chrome"];
     var parameters = ["meet.google.com/dju-eaxi-vne", "--profile-directory=Profile 1", "--start-fullscreen"];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
@@ -54,7 +60,7 @@ function meet() {
 }
 
 function cast() {
-    var executablePath = "C:\\Program Files (x86)\\DearMob\\5KPlayer\\5KPlayer.exe";
+    var executablePath = path["Cast"];
     var parameters = [];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
@@ -63,7 +69,7 @@ function cast() {
 }
 
 function whiteboard() {
-    var executablePath = "C:\\Program Files\\EPSON Projector\\Easy Interactive Tools Ver.5\\EIN_TTW.exe";
+    var executablePath = path["Board"];
     var parameters = [];
     child(executablePath, parameters, function(err, data) {
         console.log(err)
