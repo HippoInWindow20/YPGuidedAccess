@@ -3,12 +3,14 @@ var child = require('child_process').execFile;
 var $ = require("jquery");
 var currentLang = "CH"
 var topOffset = 50
-import { readFile } from 'fs/promises';
-const path = JSON.parse(
-  await readFile(
-    new URL('./some-file.json', import.meta.url)
-  )
-);
+const { readFile } = require('fs/promises');
+var path;
+init();
+
+async function init() {
+    const response = await fetch('path.json');
+    path = await response.json();
+}
 
 function doUnlock() {
     $(document.body).fadeOut(500)
